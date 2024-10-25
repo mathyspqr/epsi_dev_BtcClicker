@@ -4,6 +4,7 @@ import BTCImg from '@/assets/img/Bitcoin.png';
 interface Props {
   totalCookies: number;
   cookiesPerSecond?: number;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   onCookieClick: Function;
   cps: number
 }

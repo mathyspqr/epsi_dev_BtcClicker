@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "BTC Clicker",
-  description: "Un simple clicker",
+  description: "Un simple clicker cool!",
 };
 
 export default function RootLayout({

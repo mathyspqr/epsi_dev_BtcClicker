@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { CookieZone } from "./component/CookieZone";
 import { ShopItem } from "./component/ShopItem";
 import { PurchasedItem } from "./component/PurchasedItem";
+import { Navbar } from "./component/Navbar";
 
 export interface ShopItemType {
   id: number;
@@ -72,6 +73,8 @@ export default function Home() {
   }, [cookiesPerSecond]);
 
   return (
+    <div>
+    <Navbar></Navbar>
     <div className="h-screen w-screen flex">
       <div className="left w-1/4">
         <CookieZone
@@ -84,7 +87,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="center flex-1 bg-red-500 grid grid-cols-4 gap-3 p-5 auto-rows-fr">
+      <div className="center flex-1 grid grid-cols-4 gap-3 p-5 auto-rows-fr">
         {purchasedItems.filter(o => o.total > 0).map(item => <PurchasedItem item={item} key={item.id}></PurchasedItem>)}
       </div>
       <div className="right w-1/4 flex flex-col gap-3">
@@ -99,6 +102,7 @@ export default function Home() {
           />
         ))}
       </div>
+    </div>
     </div>
   );
 }
